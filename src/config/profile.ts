@@ -25,6 +25,12 @@ export interface Project {
   repoUrl?: string
 }
 
+/**
+ * 静态资源路径统一加 base 前缀：
+ * 本地开发为 '/'，GitHub Pages 构建时自动变为 '/仓库名/'，保证子路径部署下图片正常加载
+ */
+const asset = (p: string) => import.meta.env.BASE_URL + p.replace(/^\//, '')
+
 export const profile = {
   /** 姓名 */
   name: '林小满',
@@ -35,7 +41,7 @@ export const profile = {
   /** 所在地 */
   location: '中国 · 上海',
   /** 头像（放在 public/ 目录下，可直接替换同名文件） */
-  avatar: '/avatar.svg',
+  avatar: asset('/avatar.svg'),
 
   /** 邮箱（点击按钮自动唤起邮件客户端） */
   email: 'linxiaoman@example.com',
@@ -56,7 +62,7 @@ export const profile = {
         '本地优先存储 + 云端同步，离线也能流畅使用',
         '基于 Vue 3 + TypeScript 开发，响应式适配移动端'
       ],
-      cover: '/covers/project-ai-note.svg',
+      cover: asset('/covers/project-ai-note.svg'),
       tags: ['Vue 3', 'TypeScript', 'Pinia', 'Vite'],
       demoUrl: 'https://example.com',
       repoUrl: 'https://github.com/lin-xiaoman/ai-note'
@@ -71,7 +77,7 @@ export const profile = {
         'WebSocket 实时推送，数据刷新延迟小于 1 秒',
         '深浅两套主题一键切换，支持自定义配色方案'
       ],
-      cover: '/covers/project-dashboard.svg',
+      cover: asset('/covers/project-dashboard.svg'),
       tags: ['Vue 3', 'ECharts', 'WebSocket', 'VueUse'],
       repoUrl: 'https://github.com/lin-xiaoman/dashboard'
     },
@@ -85,7 +91,7 @@ export const profile = {
         '自动生成 RSS 订阅源，方便读者订阅更新',
         '首屏加载小于 1 秒，SEO 友好'
       ],
-      cover: '/covers/project-blog.svg',
+      cover: asset('/covers/project-blog.svg'),
       tags: ['Vue 3', 'Vite', 'Node.js', 'Markdown'],
       repoUrl: 'https://github.com/lin-xiaoman/blog'
     }
