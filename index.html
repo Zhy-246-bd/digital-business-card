@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>个人数字名片</title>
+    <meta name="description" content="个人数字名片 —— 展示个人简介、社交链接与精选作品项目" />
+    <meta name="theme-color" content="#f5f6fa" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f1218" media="(prefers-color-scheme: dark)" />
+    <link rel="icon" type="image/svg+xml" href="/avatar.svg" />
+    <script>
+      // 在应用加载前应用主题，避免首屏闪烁（与 stores/theme.ts 中的逻辑保持一致）
+      ;(function () {
+        var key = 'business-card-theme'
+        var stored = localStorage.getItem(key)
+        var dark =
+          stored === null
+            ? window.matchMedia('(prefers-color-scheme: dark)').matches
+            : stored === 'dark'
+        if (dark) document.documentElement.classList.add('dark')
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

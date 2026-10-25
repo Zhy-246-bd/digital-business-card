@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 750">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f59e0b"/>
+      <stop offset="1" stop-color="#f43f5e"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <circle cx="1010" cy="150" r="230" fill="#ffffff" opacity="0.08"/>
+  <circle cx="160" cy="680" r="190" fill="#ffffff" opacity="0.07"/>
+  <g>
+    <rect x="400" y="120" width="400" height="510" rx="28" fill="#ffffff"/>
+    <circle cx="450" cy="168" r="11" fill="#fda4af"/>
+    <circle cx="482" cy="168" r="11" fill="#fcd34d"/>
+    <circle cx="514" cy="168" r="11" fill="#86efac"/>
+    <rect x="440" y="220" width="220" height="30" rx="15" fill="#fee2e2"/>
+    <rect x="440" y="276" width="320" height="13" rx="6.5" fill="#f1f5f9"/>
+    <rect x="440" y="306" width="320" height="13" rx="6.5" fill="#f1f5f9"/>
+    <rect x="440" y="336" width="260" height="13" rx="6.5" fill="#f1f5f9"/>
+    <rect x="440" y="386" width="320" height="150" rx="16" fill="#fff1f2"/>
+    <rect x="440" y="570" width="320" height="13" rx="6.5" fill="#f1f5f9"/>
+    <rect x="440" y="600" width="200" height="13" rx="6.5" fill="#f1f5f9"/>
+  </g>
+</svg>
